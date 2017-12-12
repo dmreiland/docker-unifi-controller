@@ -24,6 +24,6 @@ RUN echo "deb http://www.ubnt.com/downloads/unifi/debian unifi5 ubiquiti" > /etc
 ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 VOLUME /usr/lib/unifi/data
-EXPOSE  8443 8080 27117 3478
+EXPOSE  8443 8080 27117 3478/udp
 WORKDIR /usr/lib/unifi
 CMD ["/usr/bin/supervisord"]
